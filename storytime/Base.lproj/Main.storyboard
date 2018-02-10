@@ -1,26 +1,884 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZwI-Vw-Lkq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="SQl-Xg-Kkl">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="ZwI-Vw-Lkq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2rd-Ob-Tve">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hXg-Qa-tYf" kind="relationship" relationship="rootViewController" id="LfH-G6-g86"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Za-JP-7Ay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1338" y="-19"/>
+        </scene>
+        <!--Brush Your Teeth!-->
+        <scene sceneID="TWe-Wy-d6q">
+            <objects>
+                <viewController id="hXg-Qa-tYf" customClass="coverPageViewController" customModule="storytime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="O8C-JY-dyg"/>
+                        <viewControllerLayoutGuide type="bottom" id="muK-KT-Ycr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="lQ5-nb-qdn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brush Your Teeth!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-te-Oru">
+                                <rect key="frame" x="85" y="129" width="205" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="O9K-lJ-e7i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Justin Kim" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oax-CZ-xXj">
+                                <rect key="frame" x="85" y="168" width="205" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="75F-pt-jym"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toothbrush-toothpaste-dental-care-clean-40798" translatesAutoresizingMaskIntoConstraints="NO" id="ffF-mv-3ZX">
+                                <rect key="frame" x="16" y="236" width="343" height="342"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ffF-mv-3ZX" firstAttribute="top" secondItem="Oax-CZ-xXj" secondAttribute="bottom" constant="47" id="2vg-WS-pF4"/>
+                            <constraint firstItem="Oax-CZ-xXj" firstAttribute="top" secondItem="SKK-te-Oru" secondAttribute="bottom" constant="18" id="3m8-HM-yUB"/>
+                            <constraint firstItem="SKK-te-Oru" firstAttribute="trailing" secondItem="Oax-CZ-xXj" secondAttribute="trailing" id="52B-3I-kC6"/>
+                            <constraint firstItem="muK-KT-Ycr" firstAttribute="top" secondItem="ffF-mv-3ZX" secondAttribute="bottom" constant="89" id="GAP-Eo-vfN"/>
+                            <constraint firstItem="SKK-te-Oru" firstAttribute="top" secondItem="O8C-JY-dyg" secondAttribute="bottom" constant="65" id="HMc-ID-ZG1"/>
+                            <constraint firstItem="ffF-mv-3ZX" firstAttribute="leading" secondItem="lQ5-nb-qdn" secondAttribute="leadingMargin" id="HkN-Pd-Csx"/>
+                            <constraint firstItem="SKK-te-Oru" firstAttribute="leading" secondItem="Oax-CZ-xXj" secondAttribute="leading" id="WCg-Od-8lJ"/>
+                            <constraint firstItem="SKK-te-Oru" firstAttribute="leading" secondItem="lQ5-nb-qdn" secondAttribute="leadingMargin" constant="69" id="a8E-dY-jgg"/>
+                            <constraint firstItem="ffF-mv-3ZX" firstAttribute="trailing" secondItem="lQ5-nb-qdn" secondAttribute="trailingMargin" id="e6x-6A-ZyM"/>
+                            <constraint firstItem="Oax-CZ-xXj" firstAttribute="centerX" secondItem="ffF-mv-3ZX" secondAttribute="centerX" id="hVb-Wo-qQn"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Brush Your Teeth!" id="XDT-Xt-KFU">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="XrC-7d-fmE">
+                            <connections>
+                                <segue destination="reP-q5-tQp" kind="show" id="fOn-1b-MLz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6eD-pf-GEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-562.39999999999998" y="-19.340329835082461"/>
+        </scene>
+        <!--Page 1-->
+        <scene sceneID="94f-rK-wub">
+            <objects>
+                <viewController id="reP-q5-tQp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ME-Te-Icl"/>
+                        <viewControllerLayoutGuide type="bottom" id="M8n-Qk-23O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7UT-I8-Xvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-0T-DOH">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="Hhf-bd-u0S"/>
+                                </constraints>
+                                <string key="text">Timmy woke up one morning, and his teeth felt funny.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-photo-280257" translatesAutoresizingMaskIntoConstraints="NO" id="8OE-e2-2n3">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TCa-0T-DOH" firstAttribute="trailing" secondItem="7UT-I8-Xvf" secondAttribute="trailingMargin" id="6qF-1u-w6l"/>
+                            <constraint firstItem="TCa-0T-DOH" firstAttribute="leading" secondItem="8OE-e2-2n3" secondAttribute="leading" id="E3t-aa-BTS"/>
+                            <constraint firstItem="TCa-0T-DOH" firstAttribute="trailing" secondItem="8OE-e2-2n3" secondAttribute="trailing" id="IFv-zI-hjS"/>
+                            <constraint firstItem="TCa-0T-DOH" firstAttribute="top" secondItem="3ME-Te-Icl" secondAttribute="bottom" constant="8" symbolic="YES" id="PQe-T0-Hre"/>
+                            <constraint firstItem="M8n-Qk-23O" firstAttribute="top" secondItem="8OE-e2-2n3" secondAttribute="bottom" constant="47" id="asr-4Q-wOf"/>
+                            <constraint firstItem="TCa-0T-DOH" firstAttribute="leading" secondItem="7UT-I8-Xvf" secondAttribute="leadingMargin" id="kbx-uK-mHF"/>
+                            <constraint firstItem="8OE-e2-2n3" firstAttribute="top" secondItem="TCa-0T-DOH" secondAttribute="bottom" constant="42" id="ngo-N5-A35"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 1" id="qFI-h4-jWG">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="NU4-gH-NUU">
+                            <connections>
+                                <segue destination="twf-EP-wEo" kind="show" id="ZgP-qe-gSi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6YV-1h-hZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="-19"/>
+        </scene>
+        <!--Page 15-->
+        <scene sceneID="X3B-dD-Elz">
+            <objects>
+                <viewController id="TeM-cX-KXe" customClass="theEndViewController" customModule="storytime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e9b-gC-9zO"/>
+                        <viewControllerLayoutGuide type="bottom" id="KON-To-WKm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="US8-FA-jwh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE END" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6f-bv-55V">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="W3c-UI-pTJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAT-bk-R4A">
+                                <rect key="frame" x="16" y="330" width="343" height="30"/>
+                                <state key="normal" title="Back to Cover"/>
+                                <connections>
+                                    <action selector="goBack:" destination="TeM-cX-KXe" eventType="touchUpInside" id="4O7-6C-3Lt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I6f-bv-55V" firstAttribute="trailing" secondItem="MAT-bk-R4A" secondAttribute="trailing" id="LaZ-6s-Gcf"/>
+                            <constraint firstItem="I6f-bv-55V" firstAttribute="trailing" secondItem="US8-FA-jwh" secondAttribute="trailingMargin" id="lHV-gq-dbf"/>
+                            <constraint firstItem="I6f-bv-55V" firstAttribute="leading" secondItem="US8-FA-jwh" secondAttribute="leadingMargin" id="lX0-h6-710"/>
+                            <constraint firstItem="I6f-bv-55V" firstAttribute="top" secondItem="e9b-gC-9zO" secondAttribute="bottom" constant="8" symbolic="YES" id="rAa-HC-L1O"/>
+                            <constraint firstItem="KON-To-WKm" firstAttribute="top" secondItem="MAT-bk-R4A" secondAttribute="bottom" constant="263" id="rcl-re-qgd"/>
+                            <constraint firstItem="I6f-bv-55V" firstAttribute="leading" secondItem="MAT-bk-R4A" secondAttribute="leading" id="tDy-ZW-Txb"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 15" id="2M7-7O-5kJ"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="yi3-dQ-qXT" kind="unwind" identifier="unwindSegueToVC1" unwindAction="unwindToVC1WithSegue:" id="KSJ-30-uDd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3to-7K-wA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yi3-dQ-qXT" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="11600.799999999999" y="-19.340329835082461"/>
+        </scene>
+        <!--Page 14-->
+        <scene sceneID="MI4-i6-NeL">
+            <objects>
+                <viewController id="TVx-8e-Elr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZW8-tR-Tgb"/>
+                        <viewControllerLayoutGuide type="bottom" id="e08-uL-aKv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Usw-ZJ-jXX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From that day on, Timmy brushed his teeth every day." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oa0-hv-RhF">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="AGS-ku-cCF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dental-care-2516133_640-1" translatesAutoresizingMaskIntoConstraints="NO" id="f2C-iY-9Cd">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Oa0-hv-RhF" firstAttribute="trailing" secondItem="f2C-iY-9Cd" secondAttribute="trailing" id="1Wp-oD-jfE"/>
+                            <constraint firstItem="e08-uL-aKv" firstAttribute="top" secondItem="f2C-iY-9Cd" secondAttribute="bottom" constant="47" id="31H-7d-Ga2"/>
+                            <constraint firstItem="Oa0-hv-RhF" firstAttribute="top" secondItem="ZW8-tR-Tgb" secondAttribute="bottom" constant="8" symbolic="YES" id="9e2-HX-ces"/>
+                            <constraint firstItem="f2C-iY-9Cd" firstAttribute="top" secondItem="Oa0-hv-RhF" secondAttribute="bottom" constant="42" id="D2R-6r-zN4"/>
+                            <constraint firstItem="Oa0-hv-RhF" firstAttribute="leading" secondItem="f2C-iY-9Cd" secondAttribute="leading" id="IR9-eb-k3S"/>
+                            <constraint firstItem="Oa0-hv-RhF" firstAttribute="leading" secondItem="Usw-ZJ-jXX" secondAttribute="leadingMargin" id="bVs-Le-ofC"/>
+                            <constraint firstItem="Oa0-hv-RhF" firstAttribute="trailing" secondItem="Usw-ZJ-jXX" secondAttribute="trailingMargin" id="gO4-xe-sC7"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 14" id="tzJ-S0-8Fs">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="ctK-n1-YOv">
+                            <connections>
+                                <segue destination="TeM-cX-KXe" kind="show" id="Mlh-IB-Y0H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxP-iQ-gpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10890" y="-19"/>
+        </scene>
+        <!--Page 13-->
+        <scene sceneID="t85-As-Yfx">
+            <objects>
+                <viewController id="sEk-6Q-rWf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gMH-SC-d2I"/>
+                        <viewControllerLayoutGuide type="bottom" id="cxn-wv-crO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rt0-qi-CTp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEW-DJ-37p">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="UNU-AO-qMp"/>
+                                </constraints>
+                                <string key="text">“I put caps and fillings in the cavities.  You do have one more chance, though.  When you’re older, you will grow new, adult teeth.  I advise you be more careful then.”</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14" translatesAutoresizingMaskIntoConstraints="NO" id="YGJ-04-xSu">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cxn-wv-crO" firstAttribute="top" secondItem="YGJ-04-xSu" secondAttribute="bottom" constant="47" id="3LX-u8-7ri"/>
+                            <constraint firstItem="LEW-DJ-37p" firstAttribute="leading" secondItem="Rt0-qi-CTp" secondAttribute="leadingMargin" id="Qdd-hr-44t"/>
+                            <constraint firstItem="LEW-DJ-37p" firstAttribute="trailing" secondItem="Rt0-qi-CTp" secondAttribute="trailingMargin" id="TOM-eK-1hR"/>
+                            <constraint firstItem="YGJ-04-xSu" firstAttribute="top" secondItem="LEW-DJ-37p" secondAttribute="bottom" constant="42" id="Ufa-Mq-dAw"/>
+                            <constraint firstItem="LEW-DJ-37p" firstAttribute="top" secondItem="gMH-SC-d2I" secondAttribute="bottom" constant="8" symbolic="YES" id="gGZ-KU-Tio"/>
+                            <constraint firstItem="LEW-DJ-37p" firstAttribute="leading" secondItem="YGJ-04-xSu" secondAttribute="leading" id="h4r-o4-9gD"/>
+                            <constraint firstItem="LEW-DJ-37p" firstAttribute="trailing" secondItem="YGJ-04-xSu" secondAttribute="trailing" id="prA-TK-kno"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 13" id="ZRD-ZG-12M">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="ejp-q2-wBt">
+                            <connections>
+                                <segue destination="TVx-8e-Elr" kind="show" id="LPo-RS-qQa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofT-Fm-Hce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10138" y="-19"/>
+        </scene>
+        <!--Page 12-->
+        <scene sceneID="6BB-oY-mlq">
+            <objects>
+                <viewController id="BXM-w7-Z3k" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QjA-VI-J2K"/>
+                        <viewControllerLayoutGuide type="bottom" id="gyP-3r-ot4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Fv-Gc-HbE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRD-kA-iqG">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="f3y-cz-JBL"/>
+                                </constraints>
+                                <string key="text">Timmy cried when he saw his teeth in the mirror.  
+
+“Oh no! What happened to my teeth?”
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wooozxh-293715" translatesAutoresizingMaskIntoConstraints="NO" id="Ylb-SC-FTX">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pRD-kA-iqG" firstAttribute="leading" secondItem="Ylb-SC-FTX" secondAttribute="leading" id="T1s-Xw-kLn"/>
+                            <constraint firstItem="pRD-kA-iqG" firstAttribute="top" secondItem="QjA-VI-J2K" secondAttribute="bottom" constant="8" symbolic="YES" id="Z9x-gE-9gR"/>
+                            <constraint firstItem="Ylb-SC-FTX" firstAttribute="top" secondItem="pRD-kA-iqG" secondAttribute="bottom" constant="42" id="jCz-yh-rKN"/>
+                            <constraint firstItem="gyP-3r-ot4" firstAttribute="top" secondItem="Ylb-SC-FTX" secondAttribute="bottom" constant="47" id="k7e-DZ-GRo"/>
+                            <constraint firstItem="pRD-kA-iqG" firstAttribute="trailing" secondItem="Ylb-SC-FTX" secondAttribute="trailing" id="oWb-We-uYI"/>
+                            <constraint firstItem="pRD-kA-iqG" firstAttribute="leading" secondItem="8Fv-Gc-HbE" secondAttribute="leadingMargin" id="rnK-Ez-8lH"/>
+                            <constraint firstItem="pRD-kA-iqG" firstAttribute="trailing" secondItem="8Fv-Gc-HbE" secondAttribute="trailingMargin" id="uw5-Dp-U4o"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 12" id="LMV-Tm-ZhL">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="PRg-Cb-Mzb">
+                            <connections>
+                                <segue destination="sEk-6Q-rWf" kind="show" id="vuq-iL-Xyd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMu-Dt-vJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9457" y="-19"/>
+        </scene>
+        <!--Page 8-->
+        <scene sceneID="CYJ-Sv-4eA">
+            <objects>
+                <viewController id="yf2-ZJ-fO4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ybu-vL-cYI"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ux-JT-ddP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="84s-l1-b1j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-8c-6l7">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="Jrc-va-QV4"/>
+                                </constraints>
+                                <string key="text">“Next!” the dentist cried.
+
+Timmy and Daddy entered the dentist’s office. 
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daniel-frank-201417" translatesAutoresizingMaskIntoConstraints="NO" id="XX1-XO-JAK">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vhh-8c-6l7" firstAttribute="trailing" secondItem="XX1-XO-JAK" secondAttribute="trailing" id="4aq-Ng-ru3"/>
+                            <constraint firstItem="vhh-8c-6l7" firstAttribute="trailing" secondItem="84s-l1-b1j" secondAttribute="trailingMargin" id="Cy8-TX-IDN"/>
+                            <constraint firstItem="7ux-JT-ddP" firstAttribute="top" secondItem="XX1-XO-JAK" secondAttribute="bottom" constant="47" id="bd0-AT-KYC"/>
+                            <constraint firstItem="vhh-8c-6l7" firstAttribute="leading" secondItem="XX1-XO-JAK" secondAttribute="leading" id="hYS-n5-BQ4"/>
+                            <constraint firstItem="XX1-XO-JAK" firstAttribute="top" secondItem="vhh-8c-6l7" secondAttribute="bottom" constant="42" id="mRJ-my-Fad"/>
+                            <constraint firstItem="vhh-8c-6l7" firstAttribute="leading" secondItem="84s-l1-b1j" secondAttribute="leadingMargin" id="mdA-OW-RXe"/>
+                            <constraint firstItem="vhh-8c-6l7" firstAttribute="top" secondItem="ybu-vL-cYI" secondAttribute="bottom" constant="8" symbolic="YES" id="p4q-ye-puF"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 8" id="eGe-AX-bjK">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="A8M-tS-YbA">
+                            <connections>
+                                <segue destination="3I0-tA-ju0" kind="show" id="550-ve-MOe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZR-K3-bZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6689" y="-19"/>
+        </scene>
+        <!--Page 7-->
+        <scene sceneID="2hA-Vo-CtT">
+            <objects>
+                <viewController id="dkn-ga-thP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vcu-r7-N0M"/>
+                        <viewControllerLayoutGuide type="bottom" id="qId-AO-VVj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CUt-e4-LvZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daddy did not respond, as he was checking his cellphone." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jx-rO-q6q">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="pkJ-NG-NE4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clem-onojeghuo-151803" translatesAutoresizingMaskIntoConstraints="NO" id="BOP-cT-rWK">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2jx-rO-q6q" firstAttribute="trailing" secondItem="BOP-cT-rWK" secondAttribute="trailing" id="1ri-gW-iiJ"/>
+                            <constraint firstItem="2jx-rO-q6q" firstAttribute="leading" secondItem="CUt-e4-LvZ" secondAttribute="leadingMargin" id="HlM-sd-W6Z"/>
+                            <constraint firstItem="2jx-rO-q6q" firstAttribute="trailing" secondItem="CUt-e4-LvZ" secondAttribute="trailingMargin" id="Jhs-7I-YEI"/>
+                            <constraint firstItem="2jx-rO-q6q" firstAttribute="leading" secondItem="BOP-cT-rWK" secondAttribute="leading" id="Lb5-tm-lWx"/>
+                            <constraint firstItem="2jx-rO-q6q" firstAttribute="top" secondItem="vcu-r7-N0M" secondAttribute="bottom" constant="8" symbolic="YES" id="MsO-ah-bhD"/>
+                            <constraint firstItem="qId-AO-VVj" firstAttribute="top" secondItem="BOP-cT-rWK" secondAttribute="bottom" constant="47" id="Rme-Op-M1Z"/>
+                            <constraint firstItem="BOP-cT-rWK" firstAttribute="top" secondItem="2jx-rO-q6q" secondAttribute="bottom" constant="42" id="dO7-qh-gei"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 7" id="mOy-hA-7uA">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="xkZ-Cz-jaf">
+                            <connections>
+                                <segue destination="yf2-ZJ-fO4" kind="show" id="D1H-e2-awy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ke-95-Br6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5274" y="-19"/>
+        </scene>
+        <!--Page 6-->
+        <scene sceneID="lIT-zv-E9V">
+            <objects>
+                <viewController id="fwu-L1-nyL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IUV-4d-qLf"/>
+                        <viewControllerLayoutGuide type="bottom" id="EZO-0c-1Vn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6qg-ry-h6G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu7-4R-FsL">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="SdC-FZ-AsZ"/>
+                                </constraints>
+                                <string key="text">As Timmy entered the dentist’s office, the first thing he heard were screams.
+
+“Daddy I’m scared!” said Timmy.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vance-osterhout-129608" translatesAutoresizingMaskIntoConstraints="NO" id="tcp-0L-oLh">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tcp-0L-oLh" firstAttribute="top" secondItem="Lu7-4R-FsL" secondAttribute="bottom" constant="42" id="6nB-51-1se"/>
+                            <constraint firstItem="EZO-0c-1Vn" firstAttribute="top" secondItem="tcp-0L-oLh" secondAttribute="bottom" constant="47" id="DaN-ZG-7Qg"/>
+                            <constraint firstItem="Lu7-4R-FsL" firstAttribute="top" secondItem="IUV-4d-qLf" secondAttribute="bottom" constant="8" symbolic="YES" id="FBb-lk-cu8"/>
+                            <constraint firstItem="Lu7-4R-FsL" firstAttribute="trailing" secondItem="tcp-0L-oLh" secondAttribute="trailing" id="Ufw-qo-xyl"/>
+                            <constraint firstItem="Lu7-4R-FsL" firstAttribute="leading" secondItem="6qg-ry-h6G" secondAttribute="leadingMargin" id="g38-A8-BFd"/>
+                            <constraint firstItem="Lu7-4R-FsL" firstAttribute="leading" secondItem="tcp-0L-oLh" secondAttribute="leading" id="pBk-ie-ICr"/>
+                            <constraint firstItem="Lu7-4R-FsL" firstAttribute="trailing" secondItem="6qg-ry-h6G" secondAttribute="trailingMargin" id="r1p-Tc-Onf"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 6" id="AIb-Ca-liH">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="ybq-qU-qwq">
+                            <connections>
+                                <segue destination="dkn-ga-thP" kind="show" id="4kx-JK-QHG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDS-NJ-hld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4538" y="-19"/>
+        </scene>
+        <!--Page 5-->
+        <scene sceneID="KFp-xI-e7p">
+            <objects>
+                <viewController id="53Z-k7-rda" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pUR-Bu-YwP"/>
+                        <viewControllerLayoutGuide type="bottom" id="EnW-3P-Swn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1bU-EZ-uBu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So they drove to the dentist." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaw-Re-Mba">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="yQg-EG-VBi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jazmin-ali-310031" translatesAutoresizingMaskIntoConstraints="NO" id="AaL-uD-7Z9">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EnW-3P-Swn" firstAttribute="top" secondItem="AaL-uD-7Z9" secondAttribute="bottom" constant="47" id="3c3-CP-Y7V"/>
+                            <constraint firstItem="AaL-uD-7Z9" firstAttribute="top" secondItem="gaw-Re-Mba" secondAttribute="bottom" constant="42" id="82g-6B-SGw"/>
+                            <constraint firstItem="gaw-Re-Mba" firstAttribute="top" secondItem="pUR-Bu-YwP" secondAttribute="bottom" constant="8" symbolic="YES" id="8LE-C6-Dnl"/>
+                            <constraint firstItem="gaw-Re-Mba" firstAttribute="leading" secondItem="AaL-uD-7Z9" secondAttribute="leading" id="91T-BF-Dzm"/>
+                            <constraint firstItem="gaw-Re-Mba" firstAttribute="trailing" secondItem="1bU-EZ-uBu" secondAttribute="trailingMargin" id="S7A-Qd-w4D"/>
+                            <constraint firstItem="gaw-Re-Mba" firstAttribute="trailing" secondItem="AaL-uD-7Z9" secondAttribute="trailing" id="lqe-9e-fk8"/>
+                            <constraint firstItem="gaw-Re-Mba" firstAttribute="leading" secondItem="1bU-EZ-uBu" secondAttribute="leadingMargin" id="oZT-y4-dg7"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 5" id="tsq-4z-sPc">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="Lku-ED-v2G">
+                            <connections>
+                                <segue destination="fwu-L1-nyL" kind="show" id="Agr-vx-ij6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FGH-62-5cp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3858" y="-19"/>
+        </scene>
+        <!--Page 9-->
+        <scene sceneID="8zE-fZ-cgC">
+            <objects>
+                <viewController id="3I0-tA-ju0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RUe-dM-9Cw"/>
+                        <viewControllerLayoutGuide type="bottom" id="giS-0A-Qmb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qTz-rw-ltP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timmy saw many shiny objects, but most importantly, he saw KNIVES, and DRILLS!" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZK-Tg-sGe">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="Jsn-7c-14d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jon-tyson-265734" translatesAutoresizingMaskIntoConstraints="NO" id="GJy-G6-WRT">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="giS-0A-Qmb" firstAttribute="top" secondItem="GJy-G6-WRT" secondAttribute="bottom" constant="47" id="0Sm-jb-DLT"/>
+                            <constraint firstItem="OZK-Tg-sGe" firstAttribute="top" secondItem="RUe-dM-9Cw" secondAttribute="bottom" constant="8" symbolic="YES" id="9Px-md-MbP"/>
+                            <constraint firstItem="OZK-Tg-sGe" firstAttribute="trailing" secondItem="GJy-G6-WRT" secondAttribute="trailing" id="FNc-Bc-irv"/>
+                            <constraint firstItem="OZK-Tg-sGe" firstAttribute="leading" secondItem="qTz-rw-ltP" secondAttribute="leadingMargin" id="YvT-er-lyJ"/>
+                            <constraint firstItem="OZK-Tg-sGe" firstAttribute="leading" secondItem="GJy-G6-WRT" secondAttribute="leading" id="dKu-zm-aiU"/>
+                            <constraint firstItem="OZK-Tg-sGe" firstAttribute="trailing" secondItem="qTz-rw-ltP" secondAttribute="trailingMargin" id="ey2-o4-1nY"/>
+                            <constraint firstItem="GJy-G6-WRT" firstAttribute="top" secondItem="OZK-Tg-sGe" secondAttribute="bottom" constant="42" id="tSN-xt-3Bf"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 9" id="xWP-fR-6X0">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="1IC-pY-eyf">
+                            <connections>
+                                <segue destination="Xvj-rg-ZWU" kind="show" id="XAY-az-kg4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECe-zy-9fu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7359" y="-19"/>
+        </scene>
+        <!--Page 4-->
+        <scene sceneID="IdH-zO-chO">
+            <objects>
+                <viewController id="jcY-cd-nZ2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ap4-Bg-cHw"/>
+                        <viewControllerLayoutGuide type="bottom" id="nMy-V8-Yxe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1va-kL-BtQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nB-ae-Bpe">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="xd5-Dx-Rcc"/>
+                                </constraints>
+                                <string key="text">“HEY DADDY!” he called.  “WHAT ARE THESE BROWN THINGS ON MY TEETH?”  “Timmy, these are cavities!  We have to go to the dentist,” Daddy said.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picsea-357048" translatesAutoresizingMaskIntoConstraints="NO" id="MDe-Ci-GxU">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nMy-V8-Yxe" firstAttribute="top" secondItem="MDe-Ci-GxU" secondAttribute="bottom" constant="47" id="9sN-5f-QQf"/>
+                            <constraint firstItem="MDe-Ci-GxU" firstAttribute="top" secondItem="5nB-ae-Bpe" secondAttribute="bottom" constant="42" id="FQ5-5E-qX8"/>
+                            <constraint firstItem="5nB-ae-Bpe" firstAttribute="leading" secondItem="1va-kL-BtQ" secondAttribute="leadingMargin" id="Gv7-pe-dJG"/>
+                            <constraint firstItem="5nB-ae-Bpe" firstAttribute="top" secondItem="ap4-Bg-cHw" secondAttribute="bottom" constant="8" symbolic="YES" id="Vc1-rH-qlX"/>
+                            <constraint firstItem="5nB-ae-Bpe" firstAttribute="leading" secondItem="MDe-Ci-GxU" secondAttribute="leading" id="ZsC-iE-05z"/>
+                            <constraint firstItem="5nB-ae-Bpe" firstAttribute="trailing" secondItem="MDe-Ci-GxU" secondAttribute="trailing" id="cLS-zB-vai"/>
+                            <constraint firstItem="5nB-ae-Bpe" firstAttribute="trailing" secondItem="1va-kL-BtQ" secondAttribute="trailingMargin" id="zhu-B6-Wxj"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 4" id="gIz-bu-R2d">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="ZQc-bC-20H">
+                            <connections>
+                                <segue destination="53Z-k7-rda" kind="show" id="lNh-a3-gta"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gg0-Ce-ziJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="-19"/>
+        </scene>
+        <!--Page 3-->
+        <scene sceneID="Qy0-Lb-ZiV">
+            <objects>
+                <viewController id="deb-Az-1vA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Py4-ua-8T0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ies-v7-CwK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PPj-qh-nAk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="He saw these dark, brown spots on some of his teeth." lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWF-PO-FAR">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="YEc-rN-Fff"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cavities3" translatesAutoresizingMaskIntoConstraints="NO" id="GEH-3b-5GS">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GEH-3b-5GS" firstAttribute="top" secondItem="nWF-PO-FAR" secondAttribute="bottom" constant="42" id="DYK-kK-sdb"/>
+                            <constraint firstItem="nWF-PO-FAR" firstAttribute="trailing" secondItem="GEH-3b-5GS" secondAttribute="trailing" id="S1K-ca-5f0"/>
+                            <constraint firstItem="Ies-v7-CwK" firstAttribute="top" secondItem="GEH-3b-5GS" secondAttribute="bottom" constant="47" id="S2S-3b-9bA"/>
+                            <constraint firstItem="nWF-PO-FAR" firstAttribute="leading" secondItem="GEH-3b-5GS" secondAttribute="leading" id="SLy-9G-vsI"/>
+                            <constraint firstItem="nWF-PO-FAR" firstAttribute="leading" secondItem="PPj-qh-nAk" secondAttribute="leadingMargin" id="Xyy-Rt-gmi"/>
+                            <constraint firstItem="nWF-PO-FAR" firstAttribute="top" secondItem="Py4-ua-8T0" secondAttribute="bottom" constant="8" symbolic="YES" id="ilI-Bx-BA5"/>
+                            <constraint firstItem="nWF-PO-FAR" firstAttribute="trailing" secondItem="PPj-qh-nAk" secondAttribute="trailingMargin" id="lSV-sY-dAq"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 3" id="ZaB-nP-FcZ">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="Tdk-Ze-Pzw">
+                            <connections>
+                                <segue destination="jcY-cd-nZ2" kind="show" id="Wkc-qk-3eW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPY-ME-sfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570" y="-19"/>
+        </scene>
+        <!--Page 2-->
+        <scene sceneID="MgO-l2-aA3">
+            <objects>
+                <viewController id="twf-EP-wEo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WcU-C3-orJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="E1S-Mj-nZE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CHu-ss-2HV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mx-3w-VE2">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="5pO-4v-YSR"/>
+                                </constraints>
+                                <string key="text">He went into the bathroom and opened his mouth wide.
+
+“AAAHHH,” he said.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-photo-848740" translatesAutoresizingMaskIntoConstraints="NO" id="s4B-qn-H6V">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Mx-3w-VE2" firstAttribute="leading" secondItem="s4B-qn-H6V" secondAttribute="leading" id="1Su-U2-6UR"/>
+                            <constraint firstItem="4Mx-3w-VE2" firstAttribute="top" secondItem="WcU-C3-orJ" secondAttribute="bottom" constant="8" symbolic="YES" id="79o-sm-6JA"/>
+                            <constraint firstItem="s4B-qn-H6V" firstAttribute="top" secondItem="4Mx-3w-VE2" secondAttribute="bottom" constant="42" id="Fsm-g3-UWp"/>
+                            <constraint firstItem="4Mx-3w-VE2" firstAttribute="trailing" secondItem="CHu-ss-2HV" secondAttribute="trailingMargin" id="M37-e3-0HR"/>
+                            <constraint firstItem="E1S-Mj-nZE" firstAttribute="top" secondItem="s4B-qn-H6V" secondAttribute="bottom" constant="47" id="Pq2-PY-f0g"/>
+                            <constraint firstItem="4Mx-3w-VE2" firstAttribute="trailing" secondItem="s4B-qn-H6V" secondAttribute="trailing" id="eN8-TO-Izu"/>
+                            <constraint firstItem="4Mx-3w-VE2" firstAttribute="leading" secondItem="CHu-ss-2HV" secondAttribute="leadingMargin" id="hri-ed-TqF"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 2" id="Sc5-k1-3P6">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="VoR-Ur-1Fn">
+                            <connections>
+                                <segue destination="deb-Az-1vA" kind="show" id="n1A-10-hfF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLU-fc-65B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="-19"/>
+        </scene>
+        <!--Page 11-->
+        <scene sceneID="6EV-CI-X3H">
+            <objects>
+                <viewController id="sNl-NL-yvo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6W5-mz-iY3"/>
+                        <viewControllerLayoutGuide type="bottom" id="L6h-GI-flI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zau-Pv-k2p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy3-fd-Fr0">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="plu-nl-ehs"/>
+                                </constraints>
+                                <string key="text">The dentist operated on Timmy.  He drilled and drilled and drilled into his teeth.  In the end, Timmy ended up with fillings and caps over his teeth.  
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piron-guillaume-492636" translatesAutoresizingMaskIntoConstraints="NO" id="nwC-H2-IFg">
+                                <rect key="frame" x="16" y="215" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xy3-fd-Fr0" firstAttribute="trailing" secondItem="zau-Pv-k2p" secondAttribute="trailingMargin" id="HEN-yp-6Uc"/>
+                            <constraint firstItem="Xy3-fd-Fr0" firstAttribute="top" secondItem="6W5-mz-iY3" secondAttribute="bottom" constant="8" symbolic="YES" id="HMI-Kg-3Sr"/>
+                            <constraint firstItem="Xy3-fd-Fr0" firstAttribute="trailing" secondItem="nwC-H2-IFg" secondAttribute="trailing" id="bf5-Tw-vDq"/>
+                            <constraint firstItem="Xy3-fd-Fr0" firstAttribute="leading" secondItem="nwC-H2-IFg" secondAttribute="leading" id="f3F-Op-G9l"/>
+                            <constraint firstItem="L6h-GI-flI" firstAttribute="top" secondItem="nwC-H2-IFg" secondAttribute="bottom" constant="47" id="liK-Aw-msE"/>
+                            <constraint firstItem="Xy3-fd-Fr0" firstAttribute="leading" secondItem="zau-Pv-k2p" secondAttribute="leadingMargin" id="vGD-KG-jGd"/>
+                            <constraint firstItem="nwC-H2-IFg" firstAttribute="top" secondItem="Xy3-fd-Fr0" secondAttribute="bottom" constant="42" id="vXi-Jd-0bq"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 11" id="Mii-mk-pec">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="SL5-g2-B9z">
+                            <connections>
+                                <segue destination="BXM-w7-Z3k" kind="show" id="6cd-Gq-F8W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCQ-D2-jqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8740" y="-19"/>
+        </scene>
+        <!--Page 10-->
+        <scene sceneID="enS-c8-ccP">
+            <objects>
+                <viewController id="Xvj-rg-ZWU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HeY-tm-OBv"/>
+                        <viewControllerLayoutGuide type="bottom" id="GV9-fV-wnI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xEW-lz-CL9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMf-Y0-WN2">
+                                <rect key="frame" x="16" y="72" width="343" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="e52-nL-v8m"/>
+                                </constraints>
+                                <string key="text">“Daddy, I don’t want to be here anymore!” cried Timmy.
+
+“It’s the only way, Timmy.  If you don’t get the cavities fixed, the rest of your teeth will go bad!”
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="kat-j-525336" translatesAutoresizingMaskIntoConstraints="NO" id="ama-he-WWa">
+                                <rect key="frame" x="16" y="214" width="343" height="361"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oMf-Y0-WN2" firstAttribute="leading" secondItem="ama-he-WWa" secondAttribute="leading" id="Cxf-0V-l1Q"/>
+                            <constraint firstItem="GV9-fV-wnI" firstAttribute="top" secondItem="ama-he-WWa" secondAttribute="bottom" constant="47" id="F7C-Yw-Q8b"/>
+                            <constraint firstItem="oMf-Y0-WN2" firstAttribute="trailing" secondItem="xEW-lz-CL9" secondAttribute="trailingMargin" id="FmB-lR-VFp"/>
+                            <constraint firstItem="oMf-Y0-WN2" firstAttribute="leading" secondItem="xEW-lz-CL9" secondAttribute="leadingMargin" id="Lbv-uM-LnE"/>
+                            <constraint firstItem="ama-he-WWa" firstAttribute="top" secondItem="oMf-Y0-WN2" secondAttribute="bottom" constant="42" id="XGq-4o-raq"/>
+                            <constraint firstItem="oMf-Y0-WN2" firstAttribute="top" secondItem="HeY-tm-OBv" secondAttribute="bottom" constant="8" symbolic="YES" id="Yd2-dW-XaW"/>
+                            <constraint firstItem="oMf-Y0-WN2" firstAttribute="trailing" secondItem="ama-he-WWa" secondAttribute="trailing" id="uac-kq-oe4"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Page 10" id="Zy8-Nc-pN4">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-right-24" id="FET-zy-X9d">
+                            <connections>
+                                <segue destination="sNl-NL-yvo" kind="show" id="FRJ-2w-mQT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLb-lB-Ffw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8063" y="-19"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="14" width="1667" height="1667"/>
+        <image name="cavities3" width="150" height="112"/>
+        <image name="clem-onojeghuo-151803" width="5400" height="3519"/>
+        <image name="daniel-frank-201417" width="3888" height="2592"/>
+        <image name="dental-care-2516133_640-1" width="640" height="640"/>
+        <image name="icons8-right-24" width="24" height="24"/>
+        <image name="jazmin-ali-310031" width="4225" height="2600"/>
+        <image name="jon-tyson-265734" width="3024" height="4032"/>
+        <image name="kat-j-525336" width="3071" height="3071"/>
+        <image name="pexels-photo-280257" width="4928" height="3264"/>
+        <image name="pexels-photo-848740" width="3504" height="2336"/>
+        <image name="picsea-357048" width="5000" height="3338"/>
+        <image name="piron-guillaume-492636" width="4608" height="3072"/>
+        <image name="toothbrush-toothpaste-dental-care-clean-40798" width="5472" height="3648"/>
+        <image name="vance-osterhout-129608" width="3089" height="2048"/>
+        <image name="wooozxh-293715" width="1856" height="2784"/>
+    </resources>
 </document>

@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		1E1422C220281FEA0033F86B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1422C120281FEA0033F86B /* AppDelegate.swift */; };
-		1E1422C420281FEA0033F86B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1422C320281FEA0033F86B /* ViewController.swift */; };
 		1E1422C720281FEA0033F86B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1422C520281FEA0033F86B /* Main.storyboard */; };
 		1E1422CA20281FEA0033F86B /* storytime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E1422C820281FEA0033F86B /* storytime.xcdatamodeld */; };
 		1E1422CC20281FEA0033F86B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1422CB20281FEA0033F86B /* Assets.xcassets */; };
 		1E1422CF20281FEA0033F86B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1422CD20281FEA0033F86B /* LaunchScreen.storyboard */; };
+		1E8FADA9202D730D00F57BB4 /* coverPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FADA8202D730D00F57BB4 /* coverPageViewController.swift */; };
+		1E8FADAB202D739400F57BB4 /* theEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FADAA202D739400F57BB4 /* theEnd.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1E1422BE20281FEA0033F86B /* storytime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = storytime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1422C120281FEA0033F86B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E1422C320281FEA0033F86B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E1422C620281FEA0033F86B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E1422C920281FEA0033F86B /* storytime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = storytime.xcdatamodel; sourceTree = "<group>"; };
 		1E1422CB20281FEA0033F86B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E1422CE20281FEA0033F86B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E1422D020281FEA0033F86B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E8FADA8202D730D00F57BB4 /* coverPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coverPageViewController.swift; sourceTree = "<group>"; };
+		1E8FADAA202D739400F57BB4 /* theEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = theEnd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				1E1422C120281FEA0033F86B /* AppDelegate.swift */,
-				1E1422C320281FEA0033F86B /* ViewController.swift */,
+				1E8FADAA202D739400F57BB4 /* theEnd.swift */,
+				1E8FADA8202D730D00F57BB4 /* coverPageViewController.swift */,
 				1E1422C520281FEA0033F86B /* Main.storyboard */,
 				1E1422CB20281FEA0033F86B /* Assets.xcassets */,
 				1E1422CD20281FEA0033F86B /* LaunchScreen.storyboard */,
@@ -140,9 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E1422C420281FEA0033F86B /* ViewController.swift in Sources */,
+				1E8FADA9202D730D00F57BB4 /* coverPageViewController.swift in Sources */,
 				1E1422CA20281FEA0033F86B /* storytime.xcdatamodeld in Sources */,
 				1E1422C220281FEA0033F86B /* AppDelegate.swift in Sources */,
+				1E8FADAB202D739400F57BB4 /* theEnd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 				1E1422D520281FEA0033F86B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

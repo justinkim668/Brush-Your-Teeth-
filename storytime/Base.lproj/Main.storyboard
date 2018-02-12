@@ -138,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="172" y="-19"/>
         </scene>
-        <!--Page 15-->
+        <!--The End-->
         <scene sceneID="X3B-dD-Elz">
             <objects>
                 <viewController id="TeM-cX-KXe" customClass="theEndViewController" customModule="storytime" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,7 +178,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Page 15" id="2M7-7O-5kJ"/>
+                    <navigationItem key="navigationItem" title="The End" id="2M7-7O-5kJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="yi3-dQ-qXT" kind="unwind" identifier="unwindSegueToVC1" unwindAction="unwindToVC1WithSegue:" id="KSJ-30-uDd"/>
@@ -674,7 +674,7 @@ Timmy and Daddy entered the dentist’s office.
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cavities3" translatesAutoresizingMaskIntoConstraints="NO" id="GEH-3b-5GS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teeth-close-up" translatesAutoresizingMaskIntoConstraints="NO" id="GEH-3b-5GS">
                                 <rect key="frame" x="16" y="215" width="343" height="361"/>
                             </imageView>
                         </subviews>
@@ -865,7 +865,6 @@ Timmy and Daddy entered the dentist’s office.
     </scenes>
     <resources>
         <image name="14" width="1667" height="1667"/>
-        <image name="cavities3" width="150" height="112"/>
         <image name="clem-onojeghuo-151803" width="5400" height="3519"/>
         <image name="daniel-frank-201417" width="3888" height="2592"/>
         <image name="dental-care-2516133_640-1" width="640" height="640"/>
@@ -877,6 +876,7 @@ Timmy and Daddy entered the dentist’s office.
         <image name="pexels-photo-848740" width="3504" height="2336"/>
         <image name="picsea-357048" width="5000" height="3338"/>
         <image name="piron-guillaume-492636" width="4608" height="3072"/>
+        <image name="teeth-close-up" width="1920" height="1080"/>
         <image name="toothbrush-toothpaste-dental-care-clean-40798" width="5472" height="3648"/>
         <image name="vance-osterhout-129608" width="3089" height="2048"/>
         <image name="wooozxh-293715" width="1856" height="2784"/>
